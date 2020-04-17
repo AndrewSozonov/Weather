@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/backgroundTemperatureFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAlignBottom="false"
+        android:contentDescription="@string/backgroundBlue"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/background_blue" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/fieldCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:shadowColor="#2B2B2B"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="20"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+            android:textColor="#FFFFFF"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fieldTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="20"
+            android:text="@string/_30"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="italic"
+            android:visibility="visible"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fieldCity"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/weatherIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fieldTemperature" />
+        <TextView
+            android:id="@+id/fieldHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="20"
+            android:text="@string/_3_5_m_s"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:visibility="invisible"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weatherIcon" />
+
+        <TextView
+            android:id="@+id/fieldWind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="20"
+            android:text="@string/_3_5_m_s"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:visibility="invisible"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fieldHumidity" />
+
+        <TextView
+            android:id="@+id/fieldPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="20"
+            android:text="@string/_720mm"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:visibility="invisible"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fieldWind" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="32dp"
+            android:background="#00FFFFFF"
+            android:isScrollContainer="false"
+            android:layoutDirection="inherit"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
